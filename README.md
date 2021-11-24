@@ -1,2 +1,2 @@
-# Createx-Construction
-I'm making up a website "Createx Construction" from Figma
+# First-bundle-of-gulp
+This is my first building of gulp for future projects
