@@ -1,0 +1,105 @@
+.services-content {
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px;
+    padding-bottom: 180px;
+    background-color: var(--color-light);
+
+    &__bg-left {
+        position: absolute;
+        left: -8px;
+        bottom: -247px;
+    }
+
+    &__bg-right {
+        position: absolute;
+        right: -9px;
+        top: 50%;
+        margin-top: -134px;
+        transform: translateY(-50%);
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--grid-gap);
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 120px;
+        }
+
+        // &--reverse {
+        //     .services-content__info {
+        //         order: -1;
+        //         padding-left: 0;
+        //     }
+
+        //     .services-content__image {
+        //         justify-self: end;
+        //     }
+        // }
+
+        &:nth-child(even) {
+            .services-content__info {
+                order: -1;
+                padding-left: 0px;
+            }
+
+            .services-content__image {
+               justify-self: end;   
+            }
+        }
+    }
+
+    &__image {
+        grid-column:  6 span;
+    }
+
+    &__info {
+        grid-column:  6 span;
+    }
+
+    &__info {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 26px;
+    }
+
+    &__image {
+        border-radius: 4px;
+        overflow: hidden;
+        max-width: 575px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 25px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 150%;
+        color: var(--color-ebony);
+    }
+
+    &__descr {
+        margin: 0;
+        margin-bottom: 49px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-storm);
+    }
+
+    &__btn {
+        padding: 11px 31px;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,92 @@
+.ul-3-cells {
+    --about-mission-gap:94px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 25px;
+    column-gap: calc(var(--about-mission-gap) * 2);
+
+    &--homepage {
+        .ul-3-cells__item {
+            background-color: var(--color-light);
+        }
+
+        .ul-3-cells__item--icon-1 {
+            background-image: url("../img/mission-quality.svg");
+        }
+
+        .ul-3-cells__item--icon-2 {
+            background-image: url("../img/mission-safety.svg");
+        }
+
+        .ul-3-cells__item--icon-3 {
+            background-image: url("../img/mission-comfort.svg");
+        }
+    }
+
+    &--our-benefit {
+        .ul-3-cells__item {
+            background-color: var(--color-ebony);
+        }
+
+        .ul-3-cells__item--icon-1 {
+            background-image: url("../img/services-page/our-benefit-icon-1.svg");
+        }
+
+        .ul-3-cells__item--icon-2 {
+            background-image: url("../img/services-page/our-benefit-icon-2.svg");
+        }
+
+        .ul-3-cells__item--icon-3 {
+            background-image: url("../img/services-page/our-benefit-icon-3.svg");
+        }
+
+        .ul-3-cells__subtitle {
+            color: var(--color-light);
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding-top: 72px;
+
+        background-size: 48px 48px;
+        background-position: top center;
+        background-repeat: no-repeat;
+
+        &:not(:last-child) {
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: calc(-1 * var(--about-mission-gap));
+                width: 1px;
+                height: 100%;
+
+                background-image: url("../img/mission-divider.svg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &__subtitle {
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--color-ebony);
+    }
+
+    &__descr {
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        text-align: center;
+        color: var(--color-storm);
+    }
+}

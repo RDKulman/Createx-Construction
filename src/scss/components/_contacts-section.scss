@@ -1,0 +1,112 @@
+.contacts-section {
+    padding: 80px 0;
+    padding-top: 80px;
+
+    background-image: url("/img/contacts-section-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--color-storm);
+
+    &__container {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.form-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border: 1px solid #e5e8ed;
+    border-radius: 4px;
+    padding: 48px 40px;
+    max-width: 495px;
+    background-color: var(--color-light);
+    box-shadow: 
+                0px 60px 80px -20px rgba(30, 33, 44, 0.16), 
+                0px 26px 24px -10px rgba(30, 33, 44, 0.1), 
+                0px 12px 10px -6px rgba(30, 33, 44, 0.08), 
+                0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+
+    &__title {
+        margin: 0;
+        margin-bottom: 24px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--color-ebony);
+    }
+
+    &__label {
+        margin-bottom: 20px;
+    }
+
+    &__form-checkbox {
+        margin-bottom: 24px;
+    }
+
+    &__btn {
+        align-self: center;
+        padding: 10px 30px;
+        
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+}
+
+.form-checkbox {
+
+    &__input {
+        display: none;
+
+        &:checked ~ .form-checkbox__caption::before {
+            background-color: var(--color-primary);
+            background-image: url("/img/form-field-checkbox.svg");
+        }
+    }
+    
+    &__caption {
+        position: relative;
+        display: block;
+        padding-left: 28px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 150%;
+
+        color: var(--color-gray);
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -1px;
+            top: 2px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: var(--color-primary);
+            border-radius: 3px;
+            width: 16px;
+            height: 16px;
+
+            background-color: var(--color-light);
+            background-position: center;
+            background-size: 10px 8px;
+            background-repeat: no-repeat;
+
+            transition: background-color 0.2s linear;
+
+        }
+
+        &:hover {
+            &::before {
+                background-color: var(--color-primary);
+                background-image: url("/img/form-field-checkbox.svg");
+            }
+        }
+    }
+}

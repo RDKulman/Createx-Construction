@@ -1,0 +1,38 @@
+.nav {
+    &__list {
+        @include flex-v-center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+
+        transition: color 0.2s linear;
+
+        &--active {
+            color: var(--color-primary);
+        }
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}
+
+// .nav-list {
+//     &--services {
+//         .nav__item:nth-child(2) {
+//             .nav__link {
+//                 color: var(--color-primary);
+//             }
+//         }
+//     }
+// }

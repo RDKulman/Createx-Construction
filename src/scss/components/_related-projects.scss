@@ -1,0 +1,93 @@
+.related-projects {
+    padding: 120px 0;
+    background-color: var(--color-light);
+
+    &--interior {
+        padding-top: 182px;
+        padding-bottom: 99px;
+    }
+
+    &__top {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        margin-bottom: 48px;
+    }
+
+    &__slider-nav {
+        transform: translateX(12px);
+    }
+
+    &__title {
+        margin: 0;
+        padding-bottom: 10px;
+        max-width: 710px;
+    }
+
+    &__items {
+        margin: -100px -30px;
+        padding: 100px 30px;
+    }
+    
+    &__learn {
+        margin-top: 80px;
+    }
+}
+
+.project-item {
+    @include flex-column-center;
+
+    border-radius: 4px;
+    padding-bottom: 24px;
+    box-shadow: 
+                0px 80px 40px -20px rgba(154, 156, 165, 0.08),
+                0px 30px 12px -10px rgba(154, 156, 165, 0.05), 
+                0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+                0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    background: var(--color-light);
+    transition: box-shadow 0.2s linear;
+
+    &__content {
+        @include flex-column-center;
+    }
+
+    &__title {
+        margin: 0;
+        margin-top: 15px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--color-ebony);
+    }
+
+    &__descr {
+        margin: 0;
+        margin-top: 4px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--color-storm);
+    }
+
+    &__btn {
+        display: none;
+        margin-top: 24px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: currentColor;
+        border-radius: 4px;
+        padding: 10px 30px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--color-primary);
+    }
+}

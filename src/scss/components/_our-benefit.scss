@@ -1,0 +1,35 @@
+.our-benefit {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 47px;
+
+    color: var(--color-ebony);
+
+    &--dark {
+        background-color: currentColor; 
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__title {
+        color: var(--color-light);
+    }
+
+    &__list {
+        margin-bottom: 40px;
+    }
+
+    &__btn {
+        position: relative;
+        top: 73px;
+        padding: 15px 112px;
+
+        font-size: 16px;
+        letter-spacing: 0.5px;        
+    }
+}
